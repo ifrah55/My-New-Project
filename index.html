@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body{
+            margin: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .error{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head> 
+<body>
+    <script src="jquery validation/dist/jquery.validate.min.js"></script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+                <h1 class="display-6 text-center"> User Feed Back  </h1>
+                <form action="" id="form1">
+                    <label for="myname"> Name</label>
+                    <input type="text" name="myname" id="myname" placeholder="Enter your name" class="form-control">
+                    <br>
+                    <label for="myname"> Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email" class="form-control">
+                    <br>
+                    <label for="rate"> Rate Us </label><br>
+                    <input type="checkbox" name="very Dissatisfied" value="vDissatisfied">Very Dissatisfied<br>
+                    <input type="checkbox" name="Dissatisfied"  value="Dissatisfied">Dissatisfied<br>
+                    <input type="checkbox" name="Netural" value="Netural">Netural<br>
+                    <input type="checkbox" name="Netural" value="Satisfied">Satisfied<br>
+                    <input type="checkbox" name="Netural" value="vSatisfied">verySatisfied<br>
+                     <br>
+                     <br><label for="favourite"> Favourite Features</label><br>
+                   <input  type="">
+                     <select name="dropdown"><br>
+                       <option value="MATHS"> MATHS</option>
+                       <option value="PHYSICS"> PHYSICS</option>
+                       <option value="URDU"> URDU</option>
+                     </select>
+                      <br>
+                      <label for="recommended"> Your Recommended</label><BR>
+                      <br><input type="radio" value="YES"> YES
+                      <input type="radio" value="NO"> NO
+                      <br>
+                      <br><label for="recommended"> Comments</label><BR>
+                        <input type="text" name="Your Feedback" id="Your Feedback" placeholder="Your Feedback" class="form-control"><br>
+                    <input type="Submit" id="" class="btn btn-dark w-100">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+
+    $(document).ready(function(){
+    $("#form1").validate({
+        rules :{
+            myname : {
+                required : true,
+                minlength : 3
+            },
+            email : {
+                required : true,
+                email : true
+            },
+            feedback: {
+                required : true,
+                maxlength : 200
+                
+            },
+         
+
+
+        }
+    })
+})
+
+
+  
+
+
+
+</script>
+
+
+
+</body>
+</html>
